@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript tutorial</title>
+    <h1>
+        You can run js in any browser on client side, not needed to be connected on any network, in browser console
+    </h1>
+    <p>
+        write css in style tag in head by assigning to the class container
+        .container{
+            border: 2px solid green;
+            margin: 5px solid pink;
+            background: yellow;
+            padding: 5px;  (padding means spacing from top and bottom)
+         }
+    </p>
+    <style>
+         .container{
+            border: 2px solid green;
+            margin: 5px solid pink;
+            background: yellow;
+            padding: 5px;  
+         }
+         .bg-color{
+            background-color: aquamarine;
+         }
+         .text-color{
+            color: blueviolet;
+         }
+    </style>
+</head>
+<body>
+    <h1>Babu, Welcome to javascript tutorials!</h1>
+    <script>
+    console.log("Hello World");
+    </script>
+    <h2>console.log() : You can find hello world written in console of the page when you click on inspect of Ctrl+Shift+I</h2>
+    <script>
+        alert("Abhyas kar be bhau nit");
+    </script>
+    <h3>alert() : Shows a pop up dialog box saying above words</h3>
+    <div id ="firstcontainer" class="container">
+        <button id="click" onclick="clicked()">
+            Daba na!
+        </button>
+        <p>
+            Chapripana karu naka mazhyapudha, kalala kay?
+        </p>
+    </div>
+    <div class="container">
+        <p>This is a paragraph, baby!</p>
+    </div>
+    <script>
+        document.write("O re Piya as a document write")
+    </script>
+    <p>
+        document.write("") : writes the given thing on page 
+    </p>
+    <script>
+        console.warn("Warning haye betya, kalala ka??")
+    </script>
+    <p>
+        console.warn("") : Gives a warning about the written message in console
+    </p>
+    <script>
+        console.error("Bhau ha error e!")
+    </script> 
+    <p>
+        console.error("") : Returns an error displaying written message in console
+    </p>
+    <p>
+        console.clear() : clears console
+    </p>
+    <p>
+        console.assert(condition) : checks the condition first and if it if false, then returns an error in console
+    </p>
+    <script>
+        console.assert(4==2)
+    </script>
+    <p>
+        here, console.assert(4==2) returns an error in console showing: js_basics.html:79 Assertion failed: console.assert as 4 is not equal to 2
+    </p>
+    <h1>This is DOM Manipulation! (DOM= Document Object Model, Document that is visible- any links/sites)</h1>
+    <p>Manipulation of div:First, give id to class as firstcontainer, then in In console= trigger the div by typing name
+        firstcontainer
+        then,
+        firstcontainer.innerHTML = "Kay bolto tu baburao?"
+        This will change the text of firstconainer div from Daba na! to above..
+    </p>
+    <p>
+        You can control CSS by using JS!
+    </p>
+    <p>
+        document.getElementsByTagName('h1')
+        points to header h1
+        take its element as: document.getElementsByTagName('h1')[0]
+    </p>
+    <p>
+        You can change its size as: document.getElementsByTagName('h1')[0].style.fontSize = "99px"
+    </p>
+    <p>
+        You can change its background colour as: document.getElementsByTagName('h1')[0].style.background = "green"
+    </p>
+    <p>
+        You can change hide it as: document.getElementsByTagName('h1')[0].style.visibility = "hidden"
+    </p>
+    <p>
+        You can remove the hidden space as: You can change its size as: document.getElementsByTagName('h1')[0].style.display = "none"
+    </p>
+    <p>
+        Use CSS baby!
+        Getting over the element first by using its id: document.getElementById('click').click()
+    </p>
+    <script>
+        document.getElementById('click').click()
+    </script>
+    <p>
+        changing border style: document.getElementById('click').style.border = 'blue'
+    </p>
+    <script>
+        document.getElementById('click').style.border = 'blue'
+    </script>
+    <p>
+        changing border colour: document.getElementById('click').style.border = '2px solid blue' 
+    </p>
+    <script>
+        document.getElementById('click').style.border = '2px solid blue'
+    </script>
+
+    <h1>
+        DOM Manipulation methods
+    </h1>
+    <h3>
+        A short trick: dom manipulation has big names - you can use them as:
+        getElementById search as their initials: gebi and it will show in vs code!
+    </h3>
+    <h3>
+        1. by using getElementById
+    </h3>
+    <p>
+        let elem = document.getElementById('click');
+        console.log(elem);
+    </p>
+    <script>
+        let elem = document.getElementById('click');
+        console.log(elem);
+    </script>
+    <h3>
+        2. by using getElementsByClassName
+    </h3>
+    <p>
+        let elemclass = document.getElementsByClassName("container");
+        console.log(elemclass);
+        elemclass[0].style.background = "orange";    (changing background colour to orange)
+        elemclass[0].classList.add("bg-color");       (changing background colour by adding class from firstly defined in style)
+        elemclass[0].classList.remove("bg-color");    (remove previously applied classes and their effects)
+    </p>
+    <script>
+        let elemclass = document.getElementsByClassName("container");
+        console.log(elemclass);
+        //elemclass[0].style.background = "orange";
+        elemclass[0].classList.add("bg-color");
+        elemclass[0].classList.add("text-color");
+    </script>
+    <h3>
+        3. accessing HTML inside of anything using .innerHTML
+    </h3>
+    <p>
+        elemclass[0].innerHTML
+        elemclass[0].innerText
+        console.log(elem.innerHTML)
+        console.log(elem.innerText)
+        console.log(elemclass[0].innerHTML)
+        console.log(elemclass[0].innerText)
+    </p>
+    <script>
+        elemclass[0].innerHTML
+        elemclass[0].innerText
+        console.log(elem.innerHTML)
+        console.log(elem.innerText)
+        console.log(elemclass[0].innerHTML)
+        console.log(elemclass[0].innerText)
+    </script>
+    <h3>
+        4. using getElementsByTagName
+    </h3>
+    <p>
+        tn = document.getElementsByTagName('button');
+        tn = document.getElementsByTagName('div');
+    </p>
+    <script>
+        tn1 = document.getElementsByTagName('button');
+        console.log(tn1)
+        tn2 = document.getElementsByTagName('div');
+        console.log(tn2)
+    </script>
+    <h3>
+        5. create elements within any element using .createElement  and .appendChild
+    </h3>
+    <p>
+        createdElement1 = document.createElement('p');
+        createdElement1.innerText = "This is a created paragraph";
+        tn2[0].appendChild(createdElement1);
+        createdElement2 = document.createElement('b');
+        createdElement2.innerText = "This is a created bold";
+        tn2[0].appendChild(createdElement2);
+
+        tn2[0].replaceChild(createdElement2, createdElement);  // replaces elements
+        // removeChild(element);  removes the element
+    </p>
+    <script>
+        createdElement1 = document.createElement('p');
+        createdElement1.innerText = "This is a created paragraph";
+        tn2[0].appendChild(createdElement1);
+        createdElement2 = document.createElement('b');
+        createdElement2.innerText = "This is a created bold";
+        tn2[0].appendChild(createdElement2);
+    </script>
+    <h3>
+        6. DOM Document functions
+    </h3>
+    <p>
+        document.location;
+        document.title;
+        document.URL;
+        document.scripts;
+        document.links;
+        document.forms;
+        document.images;
+        document.domain;
+    </p>
+    <script>
+        document.location;
+        document.title;
+        document.URL;
+        document.scripts;
+        document.links;
+        document.forms;
+        document.images;
+        document.domain;
+    </script>
+    <h3>
+        7. Selecting using query - .querySelector()
+    </h3>
+    <p>
+        sel = document.querySelector('.container')
+        console.log(sel)
+        sel2 = document.querySelectorAll('.container')
+        console.log(sel2)
+    </p>
+    <script>
+        sel = document.querySelector('.container')
+        console.log(sel)
+        sel2 = document.querySelectorAll('.container')
+        console.log(sel2)
+    </script>
+    <h1>
+        Javascript Events
+    </h1>
+    <p>
+        Kay zhalyavar kay zhala pahije, hyala event mhantat, for example:
+    </p>
+    <h3>
+        1. use of onclick="function()"
+        
+    </h3>
+    <p>
+        - on clicking that button, it will call function :
+        function clicked(){
+            console.log("The button was clicked!")
+        }
+    </p>
+    <script>
+        function clicked(){
+            console.log("The button was clicked!")
+        }
+    </script>
+    <h3>
+        2. use of window.onload=function()
+    </h3>
+    <p>
+        it calls the function() when the page/window is loaded
+    </p>
+    <script>
+        window.onload=function(){
+            console.log("The window was loaded!")
+        }
+    </script>
+    <h3>
+        3. use of .addEventListener('element', function())
+    </h3>
+    <p>
+        it adds event to the element,  for example:
+        firstcontainer.addEventListener('click', function(){
+            document.querySelectorAll('.container')[1].innerHTML = "<b><i> Button dabaya Re! </b> </i>"
+            console.log("Clicked on container")
+        })
+        // it will get executed when you click
+
+        let prevHTML = document.querySelectorAll('.container')[1].innerHTML;
+
+        firstcontainer.addEventListener('mouseover', function(){
+            document.querySelectorAll('.container')[1].innerHTML = prevHTML;
+            console.log("Mouse on container")
+        })
+        // it will get executed when you bring mouse on it
+
+        firstcontainer.addEventListener('mouseout', function(){
+            document.querySelectorAll('.container')[1].innerHTML = "<b><i> Button dabaya Re! </b> </i>"
+            console.log("Mouse out of container")
+        })
+        // it will get executed when you bring mouse out of it
+
+        firstcontainer.addEventListener('mouseup', function(){
+            console.log("Mouse up when clicked on container")
+        })
+
+        firstcontainer.addEventListener('mousedown', function(){
+            console.log("Mouse down when clicked on container")
+        })
+    </p>
+    <script>
+        firstcontainer.addEventListener('click', function(){
+            document.querySelectorAll('.container')[1].innerHTML = "<b><i> Button dabaya Re! </b> </i>"
+            console.log("Clicked on container")
+        })
+        
+        let prevHTML = document.querySelectorAll('.container')[1].innerHTML;
+
+        firstcontainer.addEventListener('mouseover', function(){
+            document.querySelectorAll('.container')[1].innerHTML = prevHTML;
+             console.log("Mouse on container")
+         })
+
+         firstcontainer.addEventListener('mouseout', function(){
+            document.querySelectorAll('.container')[1].innerHTML = "<b><i> Button dabaya Re! </b> </i>"
+             console.log("Mouse out of container")
+         })
+        
+        // firstcontainer.addEventListener('mouseup', function(){
+        //     console.log("Mouse up when clicked on container")
+        // })
+
+        // firstcontainer.addEventListener('mousedown', function(){
+        //     console.log("Mouse down when clicked on container")
+        // })
+    </script>
+
+</body>
+</html>
